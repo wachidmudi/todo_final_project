@@ -12,7 +12,16 @@ body {
     width: 800px;
     margin: 10% auto;
     text-align: center;
+}
 
+.welcome-page h4 {
+    font-weight: 500;
+}
+
+.welcome-page input {
+    padding: 6px;
+    border: 1px solid #777777;
+    border-radius: 3px;
 }
 
 .mb-1 {
