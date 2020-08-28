@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Light Todo App</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div id="app">
+        <div class="welcome-page">
+            <h1>Welcome to Light Todo App</h1>
+            <h4>Enter your name</h4>
+            <input id="input-name" type="text" placeholder="Name">
+            <button id="button-name" class="button">Start</button>
+        </div>
+    </div>
 </body>
+<script type="text/javascript">
+    // Get name
+    let inputName = document.getElementById('input-name')
+    let buttonName = document.getElementById('button-name')
+
+    buttonName.addEventListener('click', () => {
+        if (inputName.value.length) {
+            setName(inputName.value)
+            window.location.href = 'app.html'
+        }
+    })
+
+    inputName.addEventListener('keyup', ({ key }) => {
+        if (key === 'Enter') {
+            if (inputName.value.length) {
+                window.location.href = 'app.html'
+            }
+        }
+    })
+
+    function setName(name) {
+        localStorage.clear();
+        localStorage.setItem('name', name)
+    }
+</script>
 </html>
