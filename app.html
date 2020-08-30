@@ -12,36 +12,32 @@
         <div id="todo-page">
             <header id="header" class="mb-1"></header>
             <section>
-                <div class="mb-2">
-                    <div class="column-6">
-                        <h2 class="mb-1">My Task</h2>
-                        <div id="filter" class="mb-2">
-                            <label for="status">Status</label>
-                            <div class="selectdiv">
-                                <select id="filter-status" name="status">
-                                    <option value="">All</option>
-                                    <option value="next">Next</option>
-                                    <option value="progress">Progress</option>
-                                    <option value="done">Done</option>
-                                </select>
-                            </div>
-                            <label for="category">Category</label>
-                            <div class="selectdiv">
-                                <select id="filter-category" name="category">
-                                    <option value="">All</option>
-                                    <option value="productive">Productive</option>
-                                    <option value="work">Work</option>
-                                    <option value="food">Food</option>
-                                    <option value="health">Health</option>
-                                    <option value="meeting">Meeting</option>
-                                    <option value="bill">Bill</option>
-                                </select>
-                            </div>
+                <div class="column">
+                    <h2 class="mb-1">My Task</h2>
+                    <div id="filter" class="mb-2">
+                        <label for="status">Status</label>
+                        <div class="selectdiv">
+                            <select id="filter-status" name="status">
+                                <option value="">All</option>
+                                <option value="next">Next</option>
+                                <option value="progress">Progress</option>
+                                <option value="done">Done</option>
+                            </select>
+                        </div>
+                        <label for="category">Category</label>
+                        <div class="selectdiv">
+                            <select id="filter-category" name="category">
+                                <option value="">All</option>
+                                <option value="productive">Productive</option>
+                                <option value="work">Work</option>
+                                <option value="food">Food</option>
+                                <option value="health">Health</option>
+                                <option value="meeting">Meeting</option>
+                                <option value="bill">Bill</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="column-3">
-                        <button id="add-todo" class="button tooltip" text="Add new todo" data-open="modal-todo">+</button>
-                    </div>
+                    <button id="add-todo" class="button tooltip" text="Add new todo" data-open="modal-todo">+</button>
                 </div>
                 <ul id="section-list"></ul>
             </section>
