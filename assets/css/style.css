@@ -59,6 +59,39 @@ body {
     margin-bottom: 5rem;
 }
 
+.d-flex {
+    display: flex;
+}
+
+.button-group {
+    display: flex;
+}
+
+.button-group > .button {
+    border: none !important;
+    -webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0);
+    -moz-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0);
+    box-shadow: 0px 0px 25px 5px rgba(0,0,0,0);
+}
+
+.button-group > span.button {
+    cursor: default;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    display: flex;
+    padding-right: 0px !important;
+}
+
+.button-group > .delete {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.button-group > .delete:focus {
+    outline: none;
+    border: thin solid aqua;
+}
+
 .button {
     background: transparent;
     border: 1px solid transparent;
@@ -185,7 +218,7 @@ section #filter {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 10;
+  z-index: -1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,6 +235,7 @@ section #filter {
 .modal.is-visible {
   visibility: visible;
   opacity: 1;
+  z-index: 100;
 }
 
 .modal-content {
@@ -212,7 +246,7 @@ section #filter {
     height: 400px;
     padding: 1.5rem;
     position: relative;
-    overflow: auto;
+    overflow: hidden;
 }
 
 select {
@@ -271,7 +305,7 @@ ul {
 }
 
 header {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -300,8 +334,9 @@ ul#section-list li h3 {
 }
 
 ul#section-list li .content {
-    display: inline-block;
+    /*display: inline-block;*/
     width: 78%;
+    min-height: 105px;
 }
 
 .description {
@@ -311,9 +346,10 @@ ul#section-list li .content {
 }
 
 ul#section-list li .action {
-    display: inline-block;
+    display: flex;
     width: 20%;
     text-align: right;
+    align-items: flex-end;
 }
 
 ul#section-list li .action button {
@@ -322,6 +358,11 @@ ul#section-list li .action button {
     -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.08);
     -moz-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.08);
     box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.08);
+    margin-right: 5px;
+}
+
+ul#section-list li .action button:last-child {
+    margin-right: 0 !important;
 }
 
 ul#section-list li .action button:focus {
