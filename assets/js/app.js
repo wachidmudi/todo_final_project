@@ -17,17 +17,17 @@ let uniqueId = () => new Date().valueOf() + Math.random()
 let todos = [
     {
         id: uniqueId(),
-        title: 'Example Task',
+        title: 'Example Done Task',
         description: 'Hey, this is an example task for you. Write your own by pressing blue + button!',
-        status: 'next',
+        status: 'done',
         categories: ['health', 'bill']
     },
     {
         id: uniqueId(),
-        title: 'Example Task',
-        description: 'Hey, this.',
+        title: 'Example Next Task',
+        description: 'Hello World',
         status: 'next',
-        categories: ['health', 'bill']
+        categories: ['health', 'meeting']
     }
 ]
 let categories = new Set([])
@@ -95,6 +95,8 @@ let resetCategory = value => {
  */
 let renderTodosList = () => {
     addTodoName.value = ''
+    addTodoDescription.value = ''
+    categoryAdd.value = ''
     sectionList.innerHTML = listElems()
 }
 let renderCategoriesList = () => {
@@ -211,6 +213,9 @@ buttonAdd.addEventListener('click', () => {
 
 // Add category listener by press button
 buttonAddCategory.addEventListener('click', () => {
+    if (!categoryAdd.value) {
+        return null
+    }
     setCategory(categoryAdd.value)
 })
 
