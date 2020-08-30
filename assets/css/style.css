@@ -158,6 +158,12 @@ section h2 {
     height: 40px;
 }
 
+#button-add-category:focus,
+#button-add-category:active {
+    outline: none;
+    border: thin solid aqua;
+}
+
 #add-todo {
     color: #ffffff;
     background: #26c1f9;
@@ -340,6 +346,7 @@ ul#section-list li .action {
     width: 20%;
     text-align: right;
     align-items: flex-end;
+    justify-content: flex-end;
 }
 
 ul#section-list li .action button {
